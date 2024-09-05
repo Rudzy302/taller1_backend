@@ -1,18 +1,35 @@
 const http = require('http');
-//creación del servidor
-console.log("Hola mundo");
-const server = http.createServer((req, res) => { //req, peticiones (cliente -> servidor). res, es la respuesta
 
-    res.statusCode = 200; //la respuesta de nuestro server va a ser exitosa (es una respuesta manejada por backend, que significa exitosa)
-    res.setHeader('Content-Type', 'text/plain'); //el contenido de la peticion va a ser de tipo texto/plano
-    res.end('<h1> Hola, Mundo! </h1> \nun saludo mi gente bella, picos en el corta bollos'); //Enviar la respuesta.
+// Creación del servidor
+console.log("Hola mundo");
+
+const server = http.createServer((req, res) => {
+    // Respuesta exitosa
+    res.statusCode = 200;
+    // El contenido de la respuesta será de tipo HTML
+    res.setHeader('Content-Type', 'text/html');
+    // Enviar la respuesta con estilo CSS
+    res.end(`
+        <html>
+            <head>
+                <style>
+                    body {
+                        background-color: beige;
+                        color: darkblue;
+                        font-family: Arial, sans-serif;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Hola Mundo!</h1>
+                <p>esta es mi pagina</p>
+            </body>
+        </html>
+    `);
 });
 
-//Asignacion de puerto y hacer que el servidor escuche en ese puerto
+// Asignación de puerto y hacer que el servidor escuche en ese puerto
 const port = 3000;
-    server.listen(port,() => {
-    console.log(`El servidor está escuchando en http://localhost:${port}`);  
-
-
-
-    });
+server.listen(port, () => {
+    console.log(`El servidor está escuchando en http://localhost:${port}`);
+});
