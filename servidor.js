@@ -14,15 +14,15 @@ const server = http.createServer((req, res) => {
             <head>
                 <style>
                     body {
-                        background-color: beige;
-                        color: darkblue;
+                        background-color: #f0f8ff; // Color de fondo muy claro (AliceBlue)
+                        color: #000000; // Color del texto oscuro (negro)
                         font-family: Arial, sans-serif;
                     }
                 </style>
             </head>
             <body>
-                <h1>Hola Mundo!</h1>
-                <p>esta es mi pagina</p>
+                <h1>Hola, Mundo!</h1>
+                <p>Esta es mi página</p>
             </body>
         </html>
     `);
