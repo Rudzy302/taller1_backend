@@ -4,11 +4,14 @@ const http = require('http');
 console.log("Hola mundo");
 
 const server = http.createServer((req, res) => {
-    // Respuesta exitosa
+
+    if(req.url==='/'){
+        // Respuesta exitosa
     res.statusCode = 200;
     // El contenido de la respuesta será de tipo HTML
     res.setHeader('Content-Type', 'text/html');
-    // Enviar la respuesta con estilo CSS
+
+
     res.end(`
         <html>
             <head>
@@ -37,10 +40,20 @@ const server = http.createServer((req, res) => {
             </body>
         </html>
     `);
+
+    }else if(req.url === '/empleados'){
+        res.statusCode = 200;
+        // El contenido de la respuesta será de tipo HTML
+        res.setHeader('Content-Type', 'text/html');
+        res.end(`<h1>EMPLEADOS<h1>
+            `);
+    };
+
 });
 
+
 // Asignación de puerto y hacer que el servidor escuche en ese puerto
-const port = 3001;
+const port = 3002;
 server.listen(port, () => {
     console.log(`El servidor está escuchando en http://localhost:${port}`);
 });
