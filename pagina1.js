@@ -36,7 +36,8 @@ const server = http.createServer((req, res) => {
                 <p>Esta es mi pagina</p>
                 <a href="https://www.facebook.com" target="_blank">Ir a Facebook</a>
                 <a href="https://www.youtube.com" target="_blank">Ir a YouTube</a>
-                <a href="http://localhost:3002/empleados" target="_blank">Ver empleados</a>
+                <a href="http://localhost:3002/empleados" >Ver empleados</a>
+                <p>taller realizado por OSCAR DAVID RUIZ SAEZ</p>
             </body>
         </html>
     `);
@@ -46,7 +47,8 @@ const server = http.createServer((req, res) => {
         // El contenido de la respuesta será de tipo HTML
         res.setHeader('Content-Type', 'text/html');
         res.end(`<h1>EMPLEADOS<h1>
-                <a href="http://localhost:3002" target="_blank">volvera al inicio</a>
+                <a href="http://localhost:3002" >volvera al inicio</a>
+                <p>taller realizado por OSCAR DAVID RUIZ SAEZ</p>
             `);
     };
 
