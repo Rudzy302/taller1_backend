@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
 });
 
 // Asignación de puerto y hacer que el servidor escuche en ese puerto
-const port = 3000;
+const port = 302;
 server.listen(port, () => {
     console.log(`El servidor está escuchando en http://localhost:${port}`);
 });
