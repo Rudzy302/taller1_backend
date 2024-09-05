@@ -18,11 +18,21 @@ const server = http.createServer((req, res) => {
                         color: #000000; // Color del texto oscuro (negro)
                         font-family: Arial, sans-serif;
                     }
+                    h1 {
+                        text-align: center; // Centrar el texto del h1
+                    }
+                    a {
+                        display: block;
+                        margin: 10px 0;
+                        color: #0000ff; // Color del enlace (azul)
+                    }
                 </style>
             </head>
             <body>
-                <h1>Hola, Mundo!</h1>
-                <p>Esta es mi página</p>
+                <h1>BIENVENIDOS A MI PAGINA</h1>
+                <p>Esta es mi pagina</p>
+                <a href="https://www.facebook.com" target="_blank">Ir a Facebook</a>
+                <a href="https://www.youtube.com" target="_blank">Ir a YouTube</a>
             </body>
         </html>
     `);
